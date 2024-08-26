@@ -1,5 +1,26 @@
 program ejercicios;
 
+function fact(n: Integer): longint;
+begin
+    if(n = 0) then
+        fact := 1
+    else
+        fact := n * fact(n-1);
+end;
+
+function AExpB(a, b: Real):Real;
+begin
+if (a < 0) then
+    begin
+        writeLn('Error! a debe de ser mayor a 0');
+        halt(-1);
+    end
+    else
+    begin
+        AExpB := exp(b * ln(a));
+    end;
+end;
+
 procedure ejercicio1();
 var
     a, b, c, d : Integer;
@@ -245,6 +266,62 @@ Entrada     Salida
     writeln('Siguiente numero seudoaleatorio: ', (num * num div 10) mod 100);
 end;
 
+procedure ejercicio9();
+var
+    x, resultado, power_of_x : Real;
+    i : Integer;
+begin
+(*
+La funci´on exp de Pascal calcula un valor igual a la suma de la serie infinita 1 + [x/1!] +
+[(x2)/2!] + [(x3)/3!] + [(x4)/4!], siendo x un n´umero real. Escriba un programa en Pascal
+que lea por la entrada est´andar un valor real para x entre 0,0 y 1,0. El programa debe
+determinar, por un lado, la suma de los primeros cinco t´erminos de la serie infinita y, por
+otro lado, el valor de exp(x) mediante la funci´on predefinida. Como resultado, exhiba por
+la salida est´andar ambos valores calculados junto con el valor de x. Incluya mensajes de
+salida con etiquetas descriptivas para el ingreso y el despliegue de datos.
+Ejemplo:
+Entrada     Salida
+0.5         Valor introducido: x = 5.0000000000e-01
+            Suma de los cinco t´erminos = 1.648437619e+00
+            Valor de Exp (x) = 1.6487212707e+00
+*)
+    resultado := 0.;
+    power_of_x := 1.0;
+    write('Ingrese un número entre 0 y 1: ');
+    readln(x);
+    for i := 0 to 5 do
+    begin
+        resultado := resultado + power_of_x / fact(i);
+        power_of_x := power_of_x * x;
+    end;
+
+    writeln('Valor introducido: x = ', x);
+    writeln('Suma de los cinco términos = ', resultado);
+    writeln('Valor de Exp (x) = ', exp(x));
+end;
+
+procedure ejercicio10();
+var
+    input : Real;
+begin
+(*
+Con el resultado del ejercicio 11 del Pr´actico 1, escriba un programa en Pascal para determinar la ra´ız cuadrada de un n´umero real positivo a mediante el c´alculo de a^0,5. 
+El programa deber´a leer el valor para a por la entrada est´andar. Como resultado, exhiba por
+la salida est´andar el valor de a, el valor de a^0,5, y el valor de sqrt(a) (el cual se calcular´a con la funci´on predefinida). 
+Incluya mensajes de salida con etiquetas descriptivas para el ingreso y el despliegue de datos. 
+Ejemplo:
+Entrada     Salida
+12.7        Valor introducido: a = 1.2700000000e+01
+            Raiz cuadrada calculada = 3.5637059362e+00
+            Valor de Sqrt (a) = 3.5637059362e+00
+*)
+    write('Ingrese un valor positivo: ');
+    readln(input);
+    writeln('Valor introducido: a = ', input);
+    writeln('Raiz cuadrada calculada = ', AExpB(input, 0.5));
+    writeln('Valor de Sqrt (a) = ', sqrt(input));
+end;
+
 begin
     //ejercicio1();
     writeln('---------------------');
@@ -267,7 +344,13 @@ begin
     //ejercicio7();
     writeln('---------------------');
     writeln();
-    ejercicio8();
+    //ejercicio8();
+    writeln('---------------------');
+    writeln();
+    //ejercicio9();
+    writeln('---------------------');
+    writeln();
+    ejercicio10();
     writeln('---------------------');
     writeln();
 end.
