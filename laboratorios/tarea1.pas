@@ -1,4 +1,3 @@
-program tarea1;
 function sustituirLetra(letra : char; desplazamiento : integer): char;
 var
     ord_letra : integer;
@@ -32,28 +31,17 @@ begin
         halt(-1);
         end;
 
-    write('Ingrese el mensaje que desea procesar seguido de un punto ("."): ');
     n_iter := 0;
     repeat
         read(caracter);
         if(n_iter = 0) then
-            // Imprimir el mensaje descriptivo unicamente en la primera iteración y cambiar el msj dependiendo de la accion
+            // Imprimir el mensaje descriptivo unicamente en la primera iteración
             if(accion = codificar) then
                 write('El mensaje cifrado es: ')
             else
                 write('El mensaje descifrado es: ');
             n_iter := 1;
         write(sustituirLetra(caracter, clave));
-    until (caracter = '.');
+    until (caracter = FINALIZADOR);
     writeln();
 end;
-var
-    clave: integer;
-    accion: char;
-begin
-    write('Ingrese la clave: ');
-    readln(clave);
-    write('Ingrese la letra "C" para cifrar o "D" para descifrar: ');
-    readln(accion);
-    procesarMensaje(clave, accion);
-end.
