@@ -1,0 +1,144 @@
+--------------------------------
+Ingrese Opción
+--------------------------------
+0=fin
+1=Cifrar contraseña
+2=Descifrar contraseña
+3=Agregar usuario
+4=Agregar servicios de usuario
+5=Recuperar contraseña de servicio de un usuario
+6=Listar servicios de usuario
+--------------------------------
+Ingrese usuario: Ingrese contraseña maestra: Usuario agregado al gestor de contraseñas
+--------------------------------
+Ingrese Opción
+--------------------------------
+0=fin
+1=Cifrar contraseña
+2=Descifrar contraseña
+3=Agregar usuario
+4=Agregar servicios de usuario
+5=Recuperar contraseña de servicio de un usuario
+6=Listar servicios de usuario
+--------------------------------
+Ingrese usuario: Ingrese contraseña maestra: Usuario agregado al gestor de contraseñas
+--------------------------------
+Ingrese Opción
+--------------------------------
+0=fin
+1=Cifrar contraseña
+2=Descifrar contraseña
+3=Agregar usuario
+4=Agregar servicios de usuario
+5=Recuperar contraseña de servicio de un usuario
+6=Listar servicios de usuario
+--------------------------------
+Ingrese usuario: Ingrese contraseña maestra: Usuario agregado al gestor de contraseñas
+--------------------------------
+Ingrese Opción
+--------------------------------
+0=fin
+1=Cifrar contraseña
+2=Descifrar contraseña
+3=Agregar usuario
+4=Agregar servicios de usuario
+5=Recuperar contraseña de servicio de un usuario
+6=Listar servicios de usuario
+--------------------------------
+Ingrese usuario: Ingrese contraseña maestra: Usuario agregado al gestor de contraseñas
+--------------------------------
+Ingrese Opción
+--------------------------------
+0=fin
+1=Cifrar contraseña
+2=Descifrar contraseña
+3=Agregar usuario
+4=Agregar servicios de usuario
+5=Recuperar contraseña de servicio de un usuario
+6=Listar servicios de usuario
+--------------------------------
+Ingrese usuario: Ingrese contraseña maestra: Usuario agregado al gestor de contraseñas
+--------------------------------
+Ingrese Opción
+--------------------------------
+0=fin
+1=Cifrar contraseña
+2=Descifrar contraseña
+3=Agregar usuario
+4=Agregar servicios de usuario
+5=Recuperar contraseña de servicio de un usuario
+6=Listar servicios de usuario
+--------------------------------
+Ingrese usuario: Ingrese contraseña maestra: Usuario agregado al gestor de contraseñas
+--------------------------------
+Ingrese Opción
+--------------------------------
+0=fin
+1=Cifrar contraseña
+2=Descifrar contraseña
+3=Agregar usuario
+4=Agregar servicios de usuario
+5=Recuperar contraseña de servicio de un usuario
+6=Listar servicios de usuario
+--------------------------------
+Ingrese usuario: Ingrese contraseña maestra: Usuario agregado al gestor de contraseñas
+--------------------------------
+Ingrese Opción
+--------------------------------
+0=fin
+1=Cifrar contraseña
+2=Descifrar contraseña
+3=Agregar usuario
+4=Agregar servicios de usuario
+5=Recuperar contraseña de servicio de un usuario
+6=Listar servicios de usuario
+--------------------------------
+Ingrese usuario: Ingrese contraseña maestra: Usuario agregado al gestor de contraseñas
+--------------------------------
+Ingrese Opción
+--------------------------------
+0=fin
+1=Cifrar contraseña
+2=Descifrar contraseña
+3=Agregar usuario
+4=Agregar servicios de usuario
+5=Recuperar contraseña de servicio de un usuario
+6=Listar servicios de usuario
+--------------------------------
+Ingrese usuario: Ingrese contraseña maestra: Usuario agregado al gestor de contraseñas
+--------------------------------
+Ingrese Opción
+--------------------------------
+0=fin
+1=Cifrar contraseña
+2=Descifrar contraseña
+3=Agregar usuario
+4=Agregar servicios de usuario
+5=Recuperar contraseña de servicio de un usuario
+6=Listar servicios de usuario
+--------------------------------
+Ingrese usuario: Ingrese contraseña maestra: Usuario agregado al gestor de contraseñas
+--------------------------------
+Ingrese Opción
+--------------------------------
+0=fin
+1=Cifrar contraseña
+2=Descifrar contraseña
+3=Agregar usuario
+4=Agregar servicios de usuario
+5=Recuperar contraseña de servicio de un usuario
+6=Listar servicios de usuario
+--------------------------------
+Ingrese usuario: Ingrese contraseña maestra: El gestor está lleno, no se pueden agregar más usuarios
+--------------------------------
+Ingrese Opción
+--------------------------------
+0=fin
+1=Cifrar contraseña
+2=Descifrar contraseña
+3=Agregar usuario
+4=Agregar servicios de usuario
+5=Recuperar contraseña de servicio de un usuario
+6=Listar servicios de usuario
+--------------------------------
+Ejecución finalizada.

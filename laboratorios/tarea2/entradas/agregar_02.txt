@@ -1,0 +1,16 @@
+3
+usuario1.
+contMaest1.
+4
+usuario1.
+contMaest1.
+servicio1.
+contraservicio1.
+1
+servicio2.
+contraservicio2.
+1
+servicio3.
+contraservicio3.
+0
+0

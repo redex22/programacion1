@@ -1,0 +1,10 @@
+3
+Usuario1.
+contra1.
+3
+Usuario2.
+contra2.
+3
+Usuario3.
+passwd3.
+0

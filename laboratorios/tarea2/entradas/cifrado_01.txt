@@ -1,0 +1,16 @@
+1
+Esto es un texto que va a ser cifrado con c, equivale a Cesar con c.
+cc.
+1
+Esto es un texto que va a ser cifrado con cla.
+cla.
+1
+Esto es un texto que va a ser cifrado con clavecla.
+clavecla.
+1
+Un mensaje cifrado, es seguro?.
+clavelarga.
+1
+Corto.
+clavelarga.
+0

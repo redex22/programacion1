@@ -1,0 +1,72 @@
+--------------------------------
+Ingrese Opción
+--------------------------------
+0=fin
+1=Cifrar contraseña
+2=Descifrar contraseña
+3=Agregar usuario
+4=Agregar servicios de usuario
+5=Recuperar contraseña de servicio de un usuario
+6=Listar servicios de usuario
+--------------------------------
+Ingrese el texto a cifrar (máximo 100 caracteres terminando en .):Ingrese la clave para cifrar (máximo 10 caracteres terminando en .):Guvq gu wp vgzvq swg xc c ugt ekhtcfq eqp e, gswkxcng c Eguct eqp e
+--------------------------------
+Ingrese Opción
+--------------------------------
+0=fin
+1=Cifrar contraseña
+2=Descifrar contraseña
+3=Agregar usuario
+4=Agregar servicios de usuario
+5=Recuperar contraseña de servicio de un usuario
+6=Listar servicios de usuario
+--------------------------------
+Ingrese el texto a cifrar (máximo 100 caracteres terminando en .):Ingrese la clave para cifrar (máximo 10 caracteres terminando en .):Gdtq eu up tgitq qwp xl c sgc etftldq cqy ewa
+--------------------------------
+Ingrese Opción
+--------------------------------
+0=fin
+1=Cifrar contraseña
+2=Descifrar contraseña
+3=Agregar usuario
+4=Agregar servicios de usuario
+5=Recuperar contraseña de servicio de un usuario
+6=Listar servicios de usuario
+--------------------------------
+Ingrese el texto a cifrar (máximo 100 caracteres terminando en .):Ingrese la clave para cifrar (máximo 10 caracteres terminando en .):Gdtj gd wy oizeo buz xl c szv nihcays nop cgexpcnl
+--------------------------------
+Ingrese Opción
+--------------------------------
+0=fin
+1=Cifrar contraseña
+2=Descifrar contraseña
+3=Agregar usuario
+4=Agregar servicios de usuario
+5=Recuperar contraseña de servicio de un usuario
+6=Listar servicios de usuario
+--------------------------------
+Ingrese el texto a cifrar (máximo 100 caracteres terminando en .):Ingrese la clave para cifrar (máximo 10 caracteres terminando en .):Wy hiysrpe niavldf, gd niruiu?
+--------------------------------
+Ingrese Opción
+--------------------------------
+0=fin
+1=Cifrar contraseña
+2=Descifrar contraseña
+3=Agregar usuario
+4=Agregar servicios de usuario
+5=Recuperar contraseña de servicio de un usuario
+6=Listar servicios de usuario
+--------------------------------
+Ingrese el texto a cifrar (máximo 100 caracteres terminando en .):Ingrese la clave para cifrar (máximo 10 caracteres terminando en .):Ezros
+--------------------------------
+Ingrese Opción
+--------------------------------
+0=fin
+1=Cifrar contraseña
+2=Descifrar contraseña
+3=Agregar usuario
+4=Agregar servicios de usuario
+5=Recuperar contraseña de servicio de un usuario
+6=Listar servicios de usuario
+--------------------------------
+Ejecución finalizada.
