@@ -98,18 +98,36 @@ begin
     begin
         for i := 1 to MAX_USUARIOS do
             usuarios[i] := obtenerUsuarioVacio();
-        tope := MAX_USUARIOS;
+        tope := 0;
     end;
     with authInfo do
     begin
         for i := 1 to MAX_USUARIOS do
             usuarios[i] := obtenerUsuarioClaveVacio();
-        tope := MAX_USUARIOS;
+        tope := 0;
     end;
 end;
 
 procedure agregarUsuario(us:Texto; cl:clave; var gc:TGestorContrasenia; var authInfo:TAutenticacion; var full,existe:boolean);
+var
+    i: Integer;
+    nuevoUsuario: TUsuario;
+    nuevoUsuarioClave: TUsuarioClave;
 begin
+    full := gc.tope = MAX_USUARIOS;
+    for i := 1 to gc.tope do
+        existe := igualTexto(us, gc.usuarios[i].usuario);
+    if not full then
+    begin
+        with gc do
+        begin
+            nuevoUsuario.usuario := us;
+            nuevoUsuario.serviciosUsuario := NIL;
+            tope := tope + 1;
+            usuarios[tope] := nuevoUsuario;
+        end;
+        agregarInfoAutenticacion(us, cl, authInfo);
+    end;
 end;
 
 procedure agregarServicioUsuario (us:Texto; master: Clave; authInfo : TAutenticacion; servn : Texto; co:Texto; var gc:TGestorContrasenia; var res:TRes);
