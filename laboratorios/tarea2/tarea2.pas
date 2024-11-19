@@ -115,9 +115,14 @@ var
     nuevoUsuarioClave: TUsuarioClave;
 begin
     full := gc.tope = MAX_USUARIOS;
-    for i := 1 to gc.tope do
+    i := 1;
+    existe := false;
+    while (i <= gc.tope) and (not existe) do
+    begin
         existe := igualTexto(us, gc.usuarios[i].usuario);
-    if not full then
+        i := i + 1;
+    end;
+    if not (full or existe) then
     begin
         with gc do
         begin
