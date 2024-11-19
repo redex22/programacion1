@@ -1,4 +1,5 @@
 procedure print(text: Texto);
+{ Imprime en pantalla los objetos tipo Texto con un salto de linea al final }
 var
     i: Integer;
 begin
@@ -8,6 +9,7 @@ begin
 end;
 
 function obtenerClaveVacia(): Clave;
+{ inicializa un objeto Clave de manera dummy }
 var
     claveVacia: Clave;
     i: Integer;
@@ -22,6 +24,7 @@ begin
 end;
 
 function obtenerTextoVacio(): Texto;
+{ inicializa un objeto Texto de manera dummy }
 var
   textoVacio: Texto;
   i: Integer;
@@ -35,6 +38,7 @@ begin
 end;
 
 function obtenerUsuarioVacio(): TUsuario;
+{ inicializa un objeto Usuario de manera dummy }
 var
     usuarioVacio: TUsuario;
 begin
@@ -44,6 +48,7 @@ begin
 end;
 
 function obtenerUsuarioClaveVacio(): TUsuarioClave;
+{ inicializa un objeto UsuarioClave de manera dummy }
 var
     usuarioClaveVacio: TUsuarioClave;
 begin
@@ -54,6 +59,10 @@ begin
 end;
 
 function posicionEnAlfabeto(letra: Char): Integer;
+(*
+retorna la posicion alfabetica correspondiente a una letra a-zA-Z
+en caso de que sea otro caracter, retorna 0.
+*)
 begin
     case letra of
         'a'..'z':
