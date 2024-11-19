@@ -1,3 +1,12 @@
+procedure print(text: Texto);
+var
+    i: Integer;
+begin
+    for i:= 1 to text.tope do
+        write(text.tex[i]);
+    writeln();
+end;
+
 function obtenerClaveVacia(): Clave;
 var
     claveVacia: Clave;
@@ -112,7 +121,6 @@ procedure agregarUsuario(us:Texto; cl:clave; var gc:TGestorContrasenia; var auth
 var
     i: Integer;
     nuevoUsuario: TUsuario;
-    nuevoUsuarioClave: TUsuarioClave;
 begin
     full := gc.tope = MAX_USUARIOS;
     i := 1;
@@ -136,13 +144,103 @@ begin
 end;
 
 procedure agregarServicioUsuario (us:Texto; master: Clave; authInfo : TAutenticacion; servn : Texto; co:Texto; var gc:TGestorContrasenia; var res:TRes);
+var
+    respAuth: TRespAutenticacion;
+    i: Integer;
+    existe: Boolean;
+    nuevoSrv, currSrv, prevSrv: TServicios;
 begin
+    autenticarUsuario(us, master, authInfo, respAuth);
+    with gc do
+    begin
+        i := 1;
+        while (i <= tope) and (not igualTexto(us, usuarios[i].usuario)) do
+            i := i + 1;
+        new(nuevoSrv);
+        currSrv := usuarios[i].serviciosUsuario;
+        prevSrv := usuarios[i].serviciosUsuario;
+        existe := false;
+        while(currSrv <> nil) and (not existe) do
+        begin
+            existe := igualTexto(servn, currSrv^.nombreServicio);
+            prevSrv := currSrv;
+            currSrv := currSrv^.sig;
+        end;
+        currSrv := prevSrv;
+        if not respAuth.autenticacionOK then
+            res.resp := nocontra
+        else if existe then
+            res.resp := noserv
+        else
+        begin
+            res.resp := serv;
+            res.cserv := servn;
+            nuevoSrv^.nombreServicio := servn;
+            nuevoSrv^.sig := nil;
+            cifradoVigenere(co, respAuth.master, nuevoSrv^.contraServCifrada);
+            if(currSrv = nil) then
+                usuarios[i].serviciosUsuario := nuevoSrv
+            else
+                currSrv^.sig := nuevoSrv;
+        end;
+    end;
 end;
 
 procedure contraseniaServicio (us : Texto; master : Clave; servn : Texto; gc : TGestorContrasenia; authInfo : TAutenticacion; var res : TRes);
+var
+    respAuth: TRespAutenticacion;
+    i: Integer;
+    existe: Boolean;
+    currSrv, prevSrv: TServicios;
 begin
+    autenticarUsuario(us, master, authInfo, respAuth);
+    with gc do
+    begin
+        i := 1;
+        while (i <= tope) and (not igualTexto(us, usuarios[i].usuario)) do
+            i := i + 1;
+        currSrv := usuarios[i].serviciosUsuario;
+        prevSrv := usuarios[i].serviciosUsuario;
+        existe := false;
+        while(currSrv <> nil) and (not existe) do
+        begin
+            existe := igualTexto(servn, currSrv^.nombreServicio);
+            prevSrv := currSrv;
+            currSrv := currSrv^.sig;
+        end;
+        currSrv := prevSrv;
+        if not respAuth.autenticacionOK then
+                res.resp := nocontra
+        else if not existe then
+            res.resp := noserv
+        else
+        begin
+            res.resp := serv;
+            descifradoVigenere(currSrv^.contraServCifrada, respAuth.master, res.cserv);
+        end;
+    end;
 end;
 
 procedure serviciosUsuario(us:Texto;master:Clave;gc:TGestorContrasenia;authInfo:TAutenticacion;var servs:TServicios; var existe:boolean); 
+var
+    respAuth: TRespAutenticacion;
+    i: Integer;
 begin
+    autenticarUsuario(us, master, authInfo, respAuth);
+    existe := respAuth.autenticacionOK;
+    if existe then
+    begin
+        with gc do
+        begin
+            i := 1;
+            while (i <= tope) and (not igualTexto(us, usuarios[i].usuario)) do
+                i := i + 1;
+            servs := usuarios[i].serviciosUsuario;
+            while(servs <> nil) and (not existe) do
+            begin
+                print(servs^.nombreServicio);
+                servs := servs^.sig;
+            end;
+        end;
+    end;
 end;
